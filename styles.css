@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#boton {
+    background-color: #007bff; /* Azul brillante */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+#boton:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.05); /* Pequeño efecto de zoom */
+}
+
+#boton:active {
+    background-color: #004080; /* Azul más oscuro cuando se presiona */
+    transform: scale(0.98); /* Efecto de clic */
+}
+
+#categorias {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Texto oscuro para mejor lectura */
+    border: 2px solid #007bff; /* Borde azul brillante */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+#categorias:hover {
+    border-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+#categorias:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5); /* Resaltado en focus */
+}
+
+
