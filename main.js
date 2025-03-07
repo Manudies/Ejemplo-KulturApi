@@ -30,3 +30,21 @@ document.getElementById("boton").addEventListener("click", async () => {
 
     renderEvents(filteredEvents);
 });
+
+// Cerrar modal al hacer clic en la "X"
+document.querySelector(".close").addEventListener("click", () => {
+    document.getElementById("event-modal").style.display = "none";
+});
+
+// Cerrar modal si el usuario hace clic fuera del contenido
+window.addEventListener("click", (event) => {
+    const modal = document.getElementById("event-modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// Ocultar el modal al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("event-modal").style.display = "none";
+});
