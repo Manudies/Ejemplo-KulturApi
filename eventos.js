@@ -1,8 +1,11 @@
 import { fetchData } from "./fech.js"; 
 import { renderEvents } from "./render.js";
 
+let ano = new Date().getFullYear();
+ano = ano-1;
+console.log(ano);
 async function showEvents() {
-    const url = "https://api.euskadi.eus/culture/events/v1.0/events?_elements=20&_page=1"; 
+    const url = `https://api.euskadi.eus/culture/events/v1.0/events?_elements=20&_page=1&year=${ano}`; 
     const data = await fetchData(url);
     console.log(data)
     if (!data || !data.items) return [];

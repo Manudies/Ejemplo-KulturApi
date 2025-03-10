@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al CSS -->
 </head>
 <body>
-    <select name="categorias" id="categorias">
-    </select>
-    
-    <label for="provincias">Provincia:</label>
-    <select name="provincias" id="provincias">
-        <option value="0">Todas</option>
-        <option value="01">Álava</option>
-        <option value="20">Gipuzkoa</option>
-        <option value="48">Bizkaia</option>
-    </select>
-    
-    <button
-        id="boton">Filtrar
-    </button>
+    <nav>
+        <select name="categorias" id="categorias">
+        </select>
+        
+        <label for="provincias">Provincia:</label>
+        <select name="provincias" id="provincias">
+            <option value="0">Todas</option>
+            <option value="01">Álava</option>
+            <option value="20">Gipuzkoa</option>
+            <option value="48">Bizkaia</option>
+        </select>
+        
+        <button
+            id="boton">Filtrar
+        </button>
+        <button id="boton_fav">
+            Favoritos
+        </button>
+    </nav>
     <h1>Eventos en Euskadi</h1>
     <ul id="event-list"></ul>
 

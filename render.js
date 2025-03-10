@@ -1,6 +1,6 @@
 import { showEventsType, showEvents, showEventsProvince, showEventsProAndType } from "./eventos.js";
 
-function renderEvents(events) {
+function renderEvents(events, fav=false) {
     const eventList = document.getElementById('event-list');
     eventList.innerHTML = ""; // Limpiar la lista antes de mostrar nuevos eventos
     const defaultImage = './public/istockphoto-508030340-612x612.jpg';
@@ -72,11 +72,10 @@ function renderEvents(events) {
         eventItem.appendChild(eventDate);
         eventItem.appendChild(eventLocation);
         eventItem.appendChild(price);
-        eventItem.appendChild(favoritesButton);
+        if(!fav)
+            eventItem.appendChild(favoritesButton);
         eventItem.appendChild(masInfo);
         eventList.appendChild(eventItem);
-        
-        
         
         // Evento para abrir modal con más información
         masInfo.addEventListener("click", () => openModal(event));

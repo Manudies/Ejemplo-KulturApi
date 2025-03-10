@@ -48,3 +48,26 @@ window.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("event-modal").style.display = "none";
 });
+
+// Función para mostrar solo los eventos favoritos
+function showFavorites(fav) {
+    const favoriteEvents = JSON.parse(localStorage.getItem('favoriteEvents')) || [];
+    renderEvents(favoriteEvents, showfavorites); // Renderizar solo los eventos guardados en favoritos
+}
+
+// Evento para mostrar favoritos cuando se haga clic en el botón "Favoritos"
+const botonFav = document.getElementById("boton_fav");
+let showfavorites = false;
+botonFav.addEventListener("click", async() => {
+    if (!showfavorites){
+        showfavorites = true;
+        showFavorites(showfavorites);
+        botonFav.textContent = 'Volver';
+    }
+    else{
+        const initialEvents = await showEvents();
+        renderEvents(initialEvents);
+        botonFav.textContent = 'Favoritos';
+        showfavorites = false;
+    }
+})
