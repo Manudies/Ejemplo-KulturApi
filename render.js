@@ -1,4 +1,4 @@
-import { showEventsType, showEvents, showEventsProvince, showEventsProAndType } from "./eventos.js";
+import { formatDate } from "./date.js";
 
 function renderEvents(events, fav=false) {
     const eventList = document.getElementById('event-list');
@@ -18,7 +18,7 @@ function renderEvents(events, fav=false) {
         eventImage.src = (event.images && event.images.length > 0) ? event.images[0].imageUrl : defaultImage;
 
         const eventDate = document.createElement('p');
-        eventDate.textContent = `Fecha: ${event.startDate}`;
+        eventDate.textContent = `Fecha: ${formatDate(event.startDate)}`;
 
         const eventLocation = document.createElement('p');
         eventLocation.textContent = `Lugar: ${event.municipalityEs || "No especificado"}`;
